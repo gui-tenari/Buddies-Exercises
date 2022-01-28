@@ -4,8 +4,11 @@ const getPlants = () => {
   return plants;
 };
 
-const getPlantById = (id) => {
-  return defaultPlants.filter((plant) => plant.id === id);
+const getPlantsById = (id) => {
+  if (!id) {
+    throw { status: 400, message: 'id é obrigatorio' }
+  }
+  return plants.filter((plant) => plant.id === Number(id));
 };
 
 const getPlantsThatNeedsSunWithId = (id) => {
@@ -22,4 +25,6 @@ const getPlantsThatNeedsSunWithId = (id) => {
 
 module.exports = {
   getPlants,
+  getPlantsById,
 }
+
