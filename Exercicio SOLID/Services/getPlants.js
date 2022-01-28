@@ -1,4 +1,4 @@
-const plants = require('../data');
+const {defaultPlants: plants} = require('../data');
 
 const getPlants = () => {
   return plants;
