@@ -1,4 +1,4 @@
-const defaultPlants = [
+let defaultPlants = [
   {
     id: 1,
     breed: "Bromelia",
@@ -18,4 +18,7 @@ const defaultPlants = [
   },
 ];
 
-module.exports = defaultPlants;
+const deletePlants = (newPlants) => defaultPlants = newPlants
+
+
+module.exports = {defaultPlants, deletePlants};
